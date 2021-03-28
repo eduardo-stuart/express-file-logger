@@ -1,6 +1,6 @@
 # Express-File-Logger
 
-A lightweight library that logs to a file every endpoint that is accessed from Express.
+A lightweight library that logs to a file every access made on an Express server.
 
 ## Install
 
@@ -56,11 +56,10 @@ You can set the following options:
 
   * **basePath**
     - Sets the folder where the log file will be saved.
-    - It is relative to the root folder
     - Default value is **_logs_**
   * **fileName**
     - The name used for the file
-    - Default value is _**general_access.log**__ 
+    - Default value is _**general_access.log**_
   * **ip**
     - Boolean value that indicates if the IP address of the visitor will be logged
     - Default value is **true**
@@ -88,5 +87,5 @@ require('express-file-logger')(app, myOptions)
 ## Contact
 
 You can find me on:
-  * **LinkedId**: [https://www.linkedin.com/in/eduardo-stuart/]
-  * **GitHub**: [https://github.com/eduardo-stuart/]
+  * **(LinkedIn)[https://www.linkedin.com/in/eduardo-stuart/]**
+  * **(GitHub)[https://github.com/eduardo-stuart/]**

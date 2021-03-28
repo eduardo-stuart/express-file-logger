@@ -1,0 +1,24 @@
+{
+  "name": "express-file-logger",
+  "version": "1.0.0",
+  "description": "A lightweight library that logs to a file every endpoint accessed from Express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eduardo-stuart/express-file-logger.git"
+  },
+  "keywords": [
+    "Node",
+    "Express",
+    "Log"
+  ],
+  "author": "Eduardo Stuart <eduardostuart.ti@gmail.com> (https://eduardostuart.pro.br/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eduardo-stuart/express-file-logger/issues"
+  },
+  "homepage": "https://github.com/eduardo-stuart/express-file-logger#readme"
+}

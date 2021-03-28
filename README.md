@@ -83,6 +83,7 @@ const myOptions = {
 require('express-file-logger')(app, myOptions)
 ...
 ```
+<img referrerpolicy="no-referrer-when-downgrade" src="https://matomo.eduardostuart.pro.br/matomo.php?idsite=8&amp;rec=1" style="border:0" alt="" />
 
 ## Contact
 

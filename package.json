@@ -1,7 +1,7 @@
 {
   "name": "express-file-logger",
-  "version": "1.0.1",
-  "description": "A lightweight library that logs to a file every endpoint accessed from Express",
+  "version": "1.0.2",
+  "description": "A lightweight, plug-and-play library that logs to a file every endpoint accessed from Express",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

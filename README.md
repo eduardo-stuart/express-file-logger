@@ -1,6 +1,6 @@
 # Express-File-Logger
 
-A lightweight library that logs to a file every access made on an Express server.
+A lightweight, plug-and-play library that logs to a file every access made on an Express server.
 
 ## Install
 
@@ -12,20 +12,20 @@ npm install express-file-logger
 
 With this library, all the accesses made on an Express server will be saved on a text file.
 
-The resulting file will save each access on one or more lines, like the example below:
+The resulting file will record each access on one or more lines, like the example below:
 
-```bash
-28/03/2021 00:26:15: [::1] (GET) /
-28/03/2021 00:26:19: [::1] (POST) /api/user/register
-  {"name":"Eduardo","email":"Nenhum","password":"pass123"}
+```
+28/03/2021 00:26:15 [::1] (GET) /
+28/03/2021 00:26:19 [::1] (POST) /api/user/register
+  {"name":"Eduardo","email":"none@moment.com","password":"pass123"}
 ```
 
 Where:
-  * **28/03/2021 00:26:15:** This field represents a timestamp
-  * **[::1]**: Is the IP address of the visitor
-  * **(GET)**, **(POST)**, **(ETC)**: Is the HTTP method of the request
+  * **28/03/2021 00:26:15**: This field represents the timestamp of the log event
+  * **[::1]**: Thie is the IP address of the visitor
+  * **(GET)**, **(POST)**, **(ETC)**: This is the HTTP method of the request
   * **/api/user/register**: The path of the endpoint
-  * **{"name":"Eduardo","email":"Nenhum","password":"pass123"}**: The body of the request, if any
+  * **{"name":"Eduardo","email":"none@moment.com","password":"pass123"}**: The body of the request, if any
 
 
 ## Basic Usage
@@ -86,6 +86,10 @@ require('express-file-logger')(app, myOptions)
 
 ## Contact
 
-You can find me on:
-  * **(LinkedIn)[https://www.linkedin.com/in/eduardo-stuart/]**
-  * **(GitHub)[https://github.com/eduardo-stuart/]**
+Hi! My name is Eduardo Stuart and I am a software developer. 
+
+Will love to hear your opinion about this library or any of my others projects!  
+
+Fell free to contact me at the following places:
+  * **[LinkedIn](https://www.linkedin.com/in/eduardo-stuart/)**
+  * **[GitHub](https://github.com/eduardo-stuart/)**

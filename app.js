@@ -23,7 +23,7 @@ const saveToLog = (req, _, next) => {
     : ''
   const info = `${new Date().toLocaleString()}: ${ip ? '[' + ip +']' : ''} (${method}) ${url}${bodyDetails}` 
   if (options.showOnConsole) console.log(info)
-  if (options.logFile) {
+  if (logFile) {
     try {
       logFile.write(`${info}\n`)
     } catch (error) {

@@ -1,3 +1,12 @@
+/*!
+ * express-file-logger
+ * Copyright(c) 2021 Eduardo Stuart
+ * https://eduardostuart.pro.br
+ * https://www.linkedin.com/in/eduardo-stuart/
+ * 
+ * MIT Licensed
+ */
+
 'use strict'
 
 const path = require('path')
@@ -28,19 +37,19 @@ const saveToLog = (req, _, next) => {
   try {
     logFile.write(`${info}\n`)
   } catch (error) {
-    console.log(`Error writing on file ${options.fullPathFileName}: ${error}`)
+    console.log(`Error writing to file ${options.fullPathFileName}: ${error}`)
   }
   next()
 }
 
 module.exports = (app, opts) => {
-  // Test if there is already a log file ─ if there is, print a message to the console
+  // Test if there is already a log file ─ if there is, print a message to the console informing the client
   if (logFile !== null){
-    console.log(`[Ecpress-File-Logger WARNING]: there is already a file used to record the log. The current settings will not change:\n${JSON.stringify(options, null, 4)}`)
+    console.log(`[Express-File-Logger WARNING]: there is already a file used to record the log. The current settings will not change:\n${JSON.stringify(options, null, 4)}`)
     return
   }
   // Test if the required object is present ─ if not, print a message to the console warning about the problem
-  if (!app || typeof (app.locals) === 'undefined') {
+  if (!app || typeof (app.use) !== 'function') {
     console.log(`[Express-File-Logger ERROR]: to use this library, you must pass a reference to the Express App used by your application. No log will be registered for this session.`)
     return 
   }
@@ -48,6 +57,7 @@ module.exports = (app, opts) => {
   app.use(saveToLog)
   // There is any custom options?
   if(opts) Object.assign(options, opts)
+  // Create the log folder if it not exists
   if(!fs.existsSync(options.basePath)) fs.mkdirSync(options.basePath, { recursive: true })
   options.fullPathFileName = path.join(options.basePath, options.fileName)
   // This is the file that will be used to record the logs

@@ -30,7 +30,7 @@ const saveToLog = (req, _, next) => {
     ? req.headers['x-forwarded-for'] || req.connection.remoteAddress 
     : null
   const bodyDetails = req.body 
-    ? Object.keys(req.body).length > 0 ? `\n  ${JSON.stringify(req.body)}` : ''
+    ? Object.keys(req.body).length > 0 ? `\n \u2514\u2500${JSON.stringify(req.body)}` : ''
     : ''
   const info = `${new Date().toLocaleString()} ${ip ? '[' + ip +']' : ''} (${method}) ${url}${bodyDetails}` 
   if (options.showOnConsole) console.log(info)

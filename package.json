@@ -1,6 +1,6 @@
 {
   "name": "express-file-logger",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A lightweight, plug-and-play library that logs to a file every endpoint accessed from an Express Server",
   "main": "app.js",
   "scripts": {

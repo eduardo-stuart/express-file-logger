@@ -103,6 +103,12 @@ require('express-file-logger')(app, myOptions)
 
 ## Changelog
 
+  ### v1.0.5
+  
+  * For better report's visualization, the symbom **└─** is now included when the information is span for more than one line.
+
+  ### Previous versions
+
   * Changed the method used to check if the Express Object is valid
   * Fixes on the text that can be printed on console
   * Other minor fixes
@@ -110,11 +116,7 @@ require('express-file-logger')(app, myOptions)
 
 ## Contact
 
-Hi! My name is Eduardo Stuart and I am a software developer. 
-
-Will love to hear your opinion about this library or any of my others projects!  
-
-Fell free to contact me at the following places:
+Please, fell free to contact me at the following places:
   * **[WebSite](https://eduardostuart.pro.br/)**
   * **[LinkedIn](https://www.linkedin.com/in/eduardo-stuart/)**
   * **[GitHub](https://github.com/eduardo-stuart/)**

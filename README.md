@@ -82,6 +82,9 @@ You can set the following options:
   * **showOnConsole**
     - Boolean that indicates if the record will also be printed on console
     - Default value is **true**
+  * **bodyDetails**
+    - Boolean that indicates if the body details will be logged
+    - Default value is **true**
 
 These options can be defined on an object and passed in when importing the library:
 

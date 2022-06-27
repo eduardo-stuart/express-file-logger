@@ -1,6 +1,9 @@
 # Express-File-Logger
+---
 
 A lightweight, plug-and-play library that logs to a file every access made on an Express Server.
+
+---
 
 ## Install
 
@@ -8,35 +11,41 @@ A lightweight, plug-and-play library that logs to a file every access made on an
 npm install express-file-logger
 ```
 
+---
+
 ## General Info
 
-With this library, all the accesses made on an Express Server will be saved on a text file.
+With this library, all the hits on an Express' endpoint will be recorded on a text file.
 
 The resulting file will record each access on one or more lines, like the example below:
 
 ```
-28/03/2021 00:26:15 [::1] (GET) /
-28/03/2021 00:26:19 [::1] (POST) /api/user/register
+28/03/2021 00:26:15 [201.23.22.04] (GET) /
+28/03/2021 00:26:19 [201.23.22.04] (POST) /api/user/register
   {"name":"Eduardo","email":"none@moment.com","password":"pass123"}
 ```
 
 Where:
   * **28/03/2021 00:26:15**: This field represents the timestamp of the log event
-  * **[::1]**: This is the IP address of the visitor
-  * **(GET)**, **(POST)**, **(ETC)**: This is the HTTP method of the request
+  * **[201.23.22.04]**: This is the IP address of the visitor
+  * **(GET)**, **(POST)**, **(HEAD)**, **(PUT)**, etc: This is the HTTP method of the request
   * **/api/user/register**: The path of the endpoint
   * **{"name":"Eduardo","email":"none@moment.com","password":"pass123"}**: The body of the request, if any
 
 
+---
+
 ## Basic Usage
 
-To use this library, you only need a valid Express Application object.
+To use this library, you only need a valid **Express Application object**.
 
-Before using it, make sure both libraries are installed on your system:
+Before using it, make sure both libraries are properly installed on your system:
 
 ```
 npm install express express-file-logger
 ```
+
+---
 
 ### Simple Example
 
@@ -47,6 +56,8 @@ Below is an example of how to use this tool.
   3. Make sure to use the **express.json()** *middleware* before importing this library to have access to the body contents of the requests
   4. Import the **express-file-logger**, passing the reference to the **Express Application** that was created in *step 2*
   5. With the default settings, the log will be saved on your server at **'/logs/general_access.log'**
+
+#### Code example
 
 ```javascript
 // Import the Express library and get the application reference
@@ -65,6 +76,8 @@ app.get('/', (req, res) => {
 
 app.listen(3000, console.log('Server is listening on port 3000'))
 ```
+
+---
 
 ## Options
 
@@ -104,7 +117,12 @@ require('express-file-logger')(app, myOptions)
 ```
 <img referrerpolicy="no-referrer-when-downgrade" src="https://matomo.eduardostuart.pro.br/matomo.php?idsite=8&amp;rec=1" style="border:0" alt="" />
 
+---
+
 ## Changelog
+
+  ### v1.0.6
+  * Better documentation
 
   ### v1.0.5
   
@@ -119,7 +137,6 @@ require('express-file-logger')(app, myOptions)
 
 ## Contact
 
-Please, fell free to contact me at the following places:
-  * **[WebSite](https://eduardostuart.pro.br/)**
-  * **[LinkedIn](https://www.linkedin.com/in/eduardo-stuart/)**
   * **[GitHub](https://github.com/eduardo-stuart/)**
+  * **[LinkedIn](https://www.linkedin.com/in/eduardo-stuart/)**
+  * **[WebSite](https://eduardostuart.pro.br/)**

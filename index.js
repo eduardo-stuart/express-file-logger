@@ -1,6 +1,6 @@
 /*!
  * express-file-logger
- * Copyright(c) 2021 Eduardo Stuart
+ * Copyright(c) 2021-2022 Eduardo Stuart
  * https://eduardostuart.pro.br
  * https://www.linkedin.com/in/eduardo-stuart/
  * 
